@@ -25,6 +25,7 @@ print("Welcome!")
 confirmation()
 
 from MyPhoneNumber import phone_number
+print("Phone Number being tracked successfully.")
 person_number = phonenumbers.parse(phone_number)
 person_location = geocoder.description_for_number(person_number, "en")
 print("Country:", person_location)
@@ -32,7 +33,8 @@ print("Country:", person_location)
 # Get the service provider
 from phonenumbers import carrier
 service_provider = phonenumbers.parse(phone_number)
-print(carrier.name_for_number(service_provider, "en"))
+final_service_provider = carrier.name_for_number(service_provider, "en")
+print("Service Provider: "f"{final_service_provider}")
 
 from MyPhoneNumber import Key
 from opencage.geocoder import OpenCageGeocode
