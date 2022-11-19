@@ -31,3 +31,5 @@ print("Latitude: "f"{lat}\nLongitude: {lng}")
 person_map = folium.Map(location=[lat, lng], zoom_start=9)
 folium.Marker([lat, lng], popup=person_location).add_to(person_map)
 
+# Save the map in a HTML file
+person_map.save("Location Tracked.html")
