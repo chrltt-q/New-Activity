@@ -4,6 +4,7 @@ print("********** BSCOE 2-2 **********")
 print("*** Sir Danilo Madrigalejos ***\n")
 
 import phonenumbers
+import folium
 from MyPhoneNumber import phone_number
 from phonenumbers import geocoder
 
@@ -26,3 +27,7 @@ results = geocoder.geocode(query)
 lat = results[0]["geometry"]["lat"]
 lng = results[0]["geometry"]["lng"]
 print("Latitude: "f"{lat}\nLongitude: {lng}")
+
+person_map = folium.Map(location=[lat, lng], zoom_start=9)
+folium.Marker([lat, lng], popup=person_location).add_to(person_map)
+
