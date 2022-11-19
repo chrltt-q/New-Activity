@@ -10,3 +10,6 @@ from MyPhoneNumber import phone_number
 from phonenumbers import geocoder
 
 
+person_number = phonenumbers.parse(phone_number)
+person_location = geocoder.description_for_number(person_number, "en")
+print(person_location)

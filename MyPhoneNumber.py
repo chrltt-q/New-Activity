@@ -1,2 +1,2 @@
 
-phone_number = "09322124220"
+phone_number = "+639322124220"
