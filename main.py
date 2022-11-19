@@ -21,4 +21,8 @@ from opencage.geocoder import OpenCageGeocode
 geocoder = OpenCageGeocode(Key)
 query = str(person_location)
 results = geocoder.geocode(query)
-print(results)
+
+# Get the latitude and longitude of the person's location
+lat = results[0]["geometry"]["lat"]
+lng = results[0]["geometry"]["lng"]
+print("Latitude: "f"{lat}\nLongitude: {lng}")
