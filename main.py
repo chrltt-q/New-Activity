@@ -52,3 +52,5 @@ folium.Marker([lat, lng], popup=person_location).add_to(person_map)
 
 # Save the map in a HTML file
 person_map.save("Location Tracked.html")
+print("Please check the HTML file for the map of the location.")
+print("Thank you for using this program. Goodbye!")
