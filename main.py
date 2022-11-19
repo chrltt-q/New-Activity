@@ -15,3 +15,10 @@ print(person_location)
 from phonenumbers import carrier
 service_provider = phonenumbers.parse(phone_number)
 print(carrier.name_for_number(service_provider, "en"))
+
+from MyPhoneNumber import Key
+from opencage.geocoder import OpenCageGeocode
+geocoder = OpenCageGeocode(Key)
+query = str(person_location)
+results = geocoder.geocode(query)
+print(results)
